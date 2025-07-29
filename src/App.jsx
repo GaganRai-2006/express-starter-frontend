@@ -1,16 +1,18 @@
-
+import {Route,Routes} from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
-import Layout from './layout/Layout'
+import Signup from './pages/Auth/Signup'
+
 
 function App() {
  
 
   return (
     <>
-      <Layout>
-        <Home />
-      </Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth/signup" element={< Signup/>} />
+      </Routes>
     </>
   )
 }
