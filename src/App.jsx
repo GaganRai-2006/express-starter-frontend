@@ -3,6 +3,7 @@ import './App.css'
 import Home from './pages/Home'
 import Signup from './pages/Auth/Signup'
 import Login from './pages/Auth/Login'
+import NotFound from './pages/NotFound'
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/auth/signup" element={< Signup/>} />
         <Route path="/auth/login" element={< Login/>}/>
+
+        <Route path='*' element={<NotFound/>}/>
+
       </Routes>
     </>
   )
