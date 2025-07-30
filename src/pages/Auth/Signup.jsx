@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 function Signup(){
     return(
         <>
@@ -198,7 +199,7 @@ function Signup(){
                             Create Account
                         </button>
 
-                        <p className="mt-3 text-xs text-gray-500">Already have an account? <a href="/login" className="text-yellow-500">Login</a></p>
+                        <p className="mt-3 text-xs text-gray-500">Already have an account? <Link to="/auth/login" className="text-yellow-500">Sign In</Link></p>
                     </form>
                 </div>
             </section>
