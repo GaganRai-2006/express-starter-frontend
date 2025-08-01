@@ -2,10 +2,11 @@ import {Route,Routes} from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import Signup from './pages/Auth/Signup'
-import Login from './pages/Auth/Login'
+
 import NotFound from './pages/NotFound'
 import Denied from './pages/Denied'
 import Addproduct from './pages/Admin/AddProduct'
+import Login from './pages/Auth/Login'
 
 
 function App() {
