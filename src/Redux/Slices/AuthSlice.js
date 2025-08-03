@@ -3,7 +3,7 @@ import axiosInstance from "../../Helpers/axiosInstance";
 import toast from "react-hot-toast";
 
 const initialState = {
-    isLoggedIn: localStorage.getItem('isLoggedIn') === 'true' || 'false',
+    isLoggedIn: localStorage.getItem('isLoggedIn') === 'true',
     role: localStorage.getItem('role') || '',
     data: JSON.parse(localStorage.getItem('data')) || {},
 };
@@ -76,24 +76,24 @@ const AuthSlice = createSlice({
     extraReducers:(builder)=>{
         builder
         .addCase(login.fulfilled,(state,action)=>{
-            state.isLoggedIn=true,
-            state.role=action?.payload?.data?.data?.Role;
-            state.data=action?.payload?.data?.data?.userData;
+            state.isLoggedIn = true;
+            state.role = action?.payload?.data?.data?.Role;
+            state.data = action?.payload?.data?.data?.userData;
 
-            localStorage.setItem('isLoggedIn',true);
-            localStorage.setItem('role',action?.payload?.data?.data?.Role);
-            localStorage.setItem('data',JSON.stringify(action?.payload?.data?.data?.userData));
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('role', action?.payload?.data?.data?.Role);
+            localStorage.setItem('data', JSON.stringify(action?.payload?.data?.data?.userData));
 
         })
 
         .addCase(logout.fulfilled,(state)=>{
-            localStorage.setItem('isLoggedIn',false);
-            localStorage.setItem('role','');
-            localStorage.setItem('data',JSON.stringify({}));
+            localStorage.setItem('isLoggedIn', 'false');
+            localStorage.setItem('role', '');
+            localStorage.setItem('data', JSON.stringify({}));
 
-            state.isLoggedIn=false;
-            state.role='';
-            state.data={};
+            state.isLoggedIn = false;
+            state.role = '';
+            state.data = {};
         })
     }
 });
