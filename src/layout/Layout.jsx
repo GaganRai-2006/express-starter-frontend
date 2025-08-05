@@ -3,7 +3,9 @@ import Pizzalogo from "../assets/images/pizzaLogo.png";
 import Footer from "../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../Redux/Slices/AuthSlice";
-import CartIcon from "../assets/Cart.svg"
+import CartIcon from "../assets/Cart.svg";
+import {getCartDetails} from "../Redux/Slices/CartSlice"
+import { useEffect } from "react";
 
 function Layout({children}){
     const isLoggedIn=useSelector((state)=>state.auth.isLoggedIn);
@@ -17,6 +19,19 @@ function Layout({children}){
         dispatch(logout())
 
     }
+    async function fetchCartDetails(){
+        const response=await dispatch(getCartDetails());
+        console.log("useEffect response",response);
+        if(response?.payload?.isUnauthorized){
+            dispatch(logout());
+        }
+    }
+    useEffect(()=>{
+        if(isLoggedIn){
+             fetchCartDetails();
+        }
+       
+    },[]);
 
     return(
         <div>

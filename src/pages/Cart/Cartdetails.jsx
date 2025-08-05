@@ -47,7 +47,7 @@ function CartDetails(){
                         />
                         <div className="flex-1 w-full min-w-0 md:order-2 md:max-w-md">
                           <p className="text-base font-medium text-gray-900 hover:underline">
-                            <Link to={`/product/${item?._id}`}>
+                            <Link to={`/products/${item?._id}`}>
                               {`${item?.product?.productName}, ${item?.product?.description}, Category: ${item?.product?.category}`}
                             </Link>
                           </p>
