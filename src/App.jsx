@@ -12,6 +12,9 @@ import CartDetails from './pages/Cart/Cartdetails'
 import Order from "./pages/orders/Order"
 import Ordersucess from './pages/orders/OrderSuccess'
 import Requireauth from './components/Auth/RequireAuth'
+import Product from './pages/Cart/Product'
+import RiderLogin from './pages/Auth/RiderLogin'
+import Riderdashboard from './pages/Auth/Riderdashboard'
 
 
 function App() {
@@ -29,11 +32,14 @@ function App() {
           <Route path='/cart' element={<CartDetails/>}/>
           <Route path='/order' element={<Order/>}/>
           <Route path='/order/success' element={<Ordersucess/>}/>
+          <Route path='/product/:productId' element={<Product/>}/>
         </Route>
 
 
         <Route path="/admin/addproduct" element={< Addproduct/>}/>
         <Route path='/products/:productId' element={<ProductDeatils/>}/>
+        <Route path="rider/login" element={<RiderLogin/>}/>
+        <Route path="/rider/dashboard" element={<Riderdashboard/>}/>
         
 
         <Route path='*' element={<NotFound/>}/>

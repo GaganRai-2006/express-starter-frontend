@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import Pizzalogo from "../assets/images/pizzaLogo.png";
+import Pizzalogo from "../assets/images/food_icon.jpg";
 import Footer from "../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../Redux/Slices/AuthSlice";
@@ -36,10 +36,21 @@ function Layout({children}){
     return(
         <div>
         <nav className="flex items-center justify-around h-16 text-[#6B7280] font-mono border-none shadow-md">
-            <div className="flex items-center justify-center" onClick={()=>navigate('/')}>
-                 <p>Pizza App</p>
-                <img src={Pizzalogo} alt="Pizza logo" />
+            <div
+                className="flex items-center justify-center space-x-2 cursor-pointer"
+                onClick={() => navigate('/')}
+            >
+                <p className="text-lg font-semibold text-gray-800">Food App</p>
+                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-md bg-orange-400 flex items-center justify-center">
+                    <img
+                    src={Pizzalogo}
+                    alt="Pizza logo"
+                    className="w-8 h-8 object-cover"
+                    />
+                </div>
             </div>
+
+
 
             <div className="hidden md:block">
                 <div className='hidden md:block'>

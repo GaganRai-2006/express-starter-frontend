@@ -1,21 +1,23 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
         return (
               <footer className="text-gray-600 body-font ">
                 <div className="bg-gradient-to-r from-amber-50 to-orange-300">
                   <div className="container flex flex-col flex-wrap px-5 py-10 mx-auto sm:flex-row">
                     <p className="text-sm text-center text-gray-500 sm:text-left">
-                        &copy; 2024 Pizza App                    
+                        &copy; 2025 food App                    
                       <a
                         href="https://twitter.com/knyttneve"
                         rel="noopener noreferrer"
                         className="ml-1 text-gray-600"
                         target="_blank"
                       >
-                        @pizza-apps
+                        @food-apps
                       </a>
                     </p>
                     <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-                      <a className="text-[#FF9110] hover:text-[#ff8f1077]">
+                      <Link to={'https://www.facebook.com/'} className="text-[#FF9110] hover:text-[#ff8f1077]">
                         <svg
                           fill="currentColor"
                           strokeLinecap="round"
@@ -26,7 +28,7 @@ function Footer() {
                         >
                           <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                         </svg>
-                      </a>
+                      </Link>
                       <a className="ml-3 text-[#FF9110] hover:text-[#ff8f1077]">
                         <svg
                           fill="currentColor"

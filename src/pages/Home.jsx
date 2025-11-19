@@ -32,7 +32,7 @@ function Home(){
 
                         <h1 className="pb-5 font-bold text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">
                             
-                            Enjoy the Slice {' '}
+                            Enjoy the Food {' '}
                         </h1>
                         <h1>
                             😋
@@ -40,8 +40,8 @@ function Home(){
 
                     </div>
                       <p className="pb-4 text-[#6B7280]">
-                        The Pizza App lets you order your favorite pizza from the comfort of your home. 
-                        Enjoy the best pizza in town with just a few clicks.
+                        The Food App lets you order your favorite food from the comfort of your home. 
+                        Enjoy the best food in town with just a few clicks.
                         </p>
                     
                         <button className="flex items-center px-4 py-2 text-white bg-yellow-500 rounded-md hover:bg-yellow-600 group">
@@ -146,7 +146,7 @@ function Home(){
                                             Enjoy Food
                                         </h2>
                                         <p className="text-base leading-relaxed">
-                                            As soon as you get your order,enjoy the delicious pizza with your loved ones.
+                                            As soon as you get your order,enjoy the delicious food with your loved ones.
                                         </p>
                                     </div>
 

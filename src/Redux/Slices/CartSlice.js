@@ -8,10 +8,10 @@ const initialState={
 
 export const addProductToCart=createAsyncThunk("/cart/addproduct",async (productId)=>{
     try{
-        const response=axiosInstance.post(`/user/cart/add/${productId}`);
+        const response=axiosInstance.post(`/user/cart/add/${productId}`)
         toast.promise(response,{
             loading:"adding the product to cart",
-            error:'product is not added to cart',
+            error:(err)=>err.response.data.message,
             success:'successfully added the product to cart'
         });
         const apiresponse=await response;
@@ -19,7 +19,7 @@ export const addProductToCart=createAsyncThunk("/cart/addproduct",async (product
 
     }catch(error){
         console.log(error);
-        toast.error("something went wrong");
+        toast.error("something went wrong")
     }
     
 });
